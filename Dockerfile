@@ -4,6 +4,8 @@ RUN sudo apt-get update --yes
 RUN sudo apt-get upgrade --yes
 RUN sudo apt-get install --yes python-pip pandoc pandoc-citeproc texlive-xetex fonts-dejavu
 
-RUN pip install --user pandoc-fignos
-RUN pip install --user pandoc-eqnos
+RUN pip install pandoc-fignos
+RUN pip install pandoc-eqnos
+
+ENV PATH "$HOME/bin:$HOME/.local/bin:$PATH"
 
